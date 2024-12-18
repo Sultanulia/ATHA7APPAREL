@@ -8,7 +8,9 @@
   <script src="https://cdn.tailwindcss.com">
     // Ambil parameter dari URL
     const params = new URLSearchParams(window.location.search);
-    const productId = params.get('product');
+    const productImage = params.get('image');
+    const productTitle = params.get('title');
+    const productPrice = params.get('price');
 
     // Data produk (bisa dikembangkan dengan JSON atau API)
     const products = {
@@ -29,15 +31,37 @@
         price: "Rp.300000",
         description: "Deskripsi lengkap untuk produk 3.",
         image: "images/product3.jpg"
+      },
+      "4": {
+        title: "PRODUCT 4",
+        price: "Rp.400000",
+        description: "Deskripsi lengkap untuk produk 4.",
+        image: "images/product4.jpg"
       }
     };
 
     // Cek jika produk ada dalam data
     if (products[productId]) {
-      document.getElementById("product-title").innerText = products[productId].title;
-      document.getElementById("product-price").innerText = `Harga: ${products[productId].price}`;
+      document.getElementById('product-image').src = productImage;
+      document.getElementById('product-title').innerText = productTitle;
+      document.getElementById('product-price').innerText = `Harga: ${productPrice}`;
       document.getElementById("product-description").innerText = products[productId].description;
-      document.getElementById("product-image").src = products[productId].image;
+    
+    // Tampilkan produk lainnya
+      const otherProductsContainer = document.getElementById("other-products");
+      for (const id in products) {
+        if (id !== productId) { // Skip produk yang sedang ditampilkan
+          const product = products[id];
+          const productCard = `
+            <a href="product-detail.html?product=${id}" class="block bg-white p-4 rounded-lg shadow hover:shadow-lg">
+              <img src="${product.image}" alt="${product.title}" class="w-full h-48 object-cover rounded-md mb-4">
+              <h3 class="text-lg font-semibold">${product.title}</h3>
+              <p class="text-gray-600">${product.price}</p>
+            </a>
+          `;
+          otherProductsContainer.innerHTML += productCard;
+        }
+      }
     } else {
       // Jika parameter tidak valid, tampilkan pesan
       document.querySelector("section").innerHTML = "<h1 class='text-2xl font-bold text-center'>Produk tidak ditemukan</h1>";
@@ -48,24 +72,24 @@
 
  <body class="font-sans">
   <!-- Header -->
-  <header class="border-b">
-   <div class="container mx-auto flex justify-between items-center py-4 px-6">
-    <img alt="Logo" class="h-8" height="50" src="asset/logo atha7apparel.jpeg" width="50"/>
-    <nav class="space-x-6">
-     <a class="text-gray-700" href="index.html">
-      Home
-     </a>
-     <a class="text-gray-700" href="product.html">
-      Product
-     </a>
-     <a class="text-gray-700" href="customorder.html">
-      How to Order
-     </a>
-     <a class="text-gray-700" href="aboutus.html">
-      About us
-     </a>
-    </nav>
-   </div>
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <img alt="Atha 7 Logo" class="h-10" height="h-auto" src="asset/logo atha7apparel.jpeg" width="w-auto"/>
+        <nav class="space-x-6">
+        <a class="text-gray-800 hover:text-gray-600" href="index.html">
+        Home
+        </a>
+        <a class="text-gray-800 hover:text-gray-600" href="product.html">
+        Product
+        </a>
+        <a class="text-gray-800 hover:text-gray-600" href="customorder.html">
+        How to Order
+        </a>
+        <a class="text-gray-800 hover:text-gray-600" href="aboutus.html">
+        About Us
+        </a>
+        </nav>
+    </div>
   </header>
 
   <!-- Breadcrumb -->
@@ -78,7 +102,7 @@
   <!-- Main Content -->
   <div class="container mx-auto flex flex-col md:flex-row py-8 px-6">
    <div class="md:w-1/2">
-    <img alt="Class Healone Football Jersey" class="w-full" height="600" src="https://img.freepik.com/premium-photo/jersey-mockup_1314622-20613.jpg" width="600"/>
+    <img alt="Product Image" class="w-full" height="600" src="asset/WhatsApp Image 2024-12-18 at 00.26.56 (1).jpeg" width="600" id="product-image"/>
    </div>
    <div class="md:w-1/2 md:pl-8 mt-8 md:mt-0">
     <h1 class="text-2xl font-bold">
@@ -149,12 +173,12 @@
       SOCIAL MEDIA
      </h3>
      <p class="mt-4">
-      <i class="fab fa-instagram">
+      <i class="fab fa-instagram" href="https://www.instagram.com/atha7apparel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw">
       </i>
       Instagram
      </p>
      <p class="mt-2">
-      <i class="fab fa-tiktok">
+      <i class="fab fa-tiktok" href="https://www.tiktok.com/@atha7apparel?is_from_webapp=1&sender_device=pc">
       </i>
       TikTok
      </p>

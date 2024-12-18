@@ -15,24 +15,24 @@
 
  <body class="font-sans">
   <!-- Header -->
-  <header class="border-b">
-   <div class="container mx-auto flex justify-between items-center py-4">
-    <img alt="Company Logo" class="h-8" height="50" src="asset/logo atha7apparel.jpeg" width="50"/>
-    <nav class="space-x-4">
-     <a class="text-gray-700 hover:text-black" href="index.html">
-      Home
-     </a>
-     <a class="text-gray-700 hover:text-black" href="product.html">
-      Product
-     </a>
-     <a class="text-gray-700 hover:text-black" href="customorder.html">
-      How to Order
-     </a>
-     <a class="text-gray-700 hover:text-black" href="aboutus.html">
-      About us
-     </a>
-    </nav>
-   </div>
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <img alt="Atha 7 Logo" class="h-10" height="h-auto" src="asset/logo atha7apparel.jpeg" width="w-auto"/>
+        <nav class="space-x-6">
+        <a class="text-gray-800 hover:text-gray-600" href="index.html">
+        Home
+        </a>
+        <a class="text-gray-800 hover:text-gray-600" href="product.html">
+        Product
+        </a>
+        <a class="text-gray-800 hover:text-gray-600" href="customorder.html">
+        How to Order
+        </a>
+        <a class="text-gray-800 hover:text-gray-600" href="aboutus.html">
+        About Us
+        </a>
+        </nav>
+    </div>
   </header>
 
   <!-- Main Content -->
@@ -42,36 +42,36 @@
     <!-- Product Items -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         <div>
-            <a href="detailproduct.html?product=1" class="block">
-            <img alt="Product image 1" class="w-full h-64 object-cover cursor-pointer" onclick="showDetails('LOREM IPSUM DOLOR SIT AMET', 'Rp.0000000')" src="asset/WhatsApp Image 2024-12-18 at 00.26.56 (1).jpeg"/>
+            <a href="detailproduct.html?product=1&image=asset/WhatsApp Image 2024-12-18 at 00.26.56 (1).jpeg&title=PRODUCT%201&price=Rp.100000" class="block">
+            <img alt="Product 1" class="w-full h-64 object-cover cursor-pointer" onclick="showDetails('LOREM IPSUM DOLOR SIT AMET', 'Rp.0000000')" src="asset/WhatsApp Image 2024-12-18 at 00.26.56 (1).jpeg"/>
             <p class="mt-4">PRODUCT 1</p>
-            <p class="text-gray-500">Rp.0000000</p>
+            <p class="text-gray-500">Rp.100000</p>
             </a>
         </div>
         <div>
-            <a href="detailproduct.html?product=2" class="block">
-            <img alt="Product image 2" class="w-full h-64 object-cover cursor-pointer" onclick="showDetails('LOREM IPSUM DOLOR SIT AMET', 'Rp.0000000')" src="asset/WhatsApp Image 2024-12-18 at 00.26.56 (2).jpeg"/>
+            <a href="detailproduct.html?product=2&image=images/product2.jpg&title=PRODUCT%202&price=Rp.200000" class="block">
+            <img alt="Product 2" class="w-full h-64 object-cover cursor-pointer" onclick="showDetails('LOREM IPSUM DOLOR SIT AMET', 'Rp.0000000')" src="asset/WhatsApp Image 2024-12-18 at 00.26.56 (2).jpeg"/>
             <p class="mt-4">PRODUCT 2</p>
-            <p class="text-gray-500">Rp.0000000</p>
+            <p class="text-gray-500">Rp.200000</p>
             </a>
         </div>
         <div>
-            <a href="detailproduct.html?product=3" class="block">
-            <img alt="Product image 3" class="w-full h-64 object-cover cursor-pointer" onclick="showDetails('LOREM IPSUM DOLOR SIT AMET', 'Rp.0000000')" src="asset/WhatsApp Image 2024-12-18 at 00.26.56.jpeg"/>
+            <a href="detailproduct.html?product=3&image=images/product3.jpg&title=PRODUCT%203&price=Rp.300000" class="block">
+            <img alt="Product 3" class="w-full h-64 object-cover cursor-pointer" onclick="showDetails('LOREM IPSUM DOLOR SIT AMET', 'Rp.0000000')" src="asset/WhatsApp Image 2024-12-18 at 00.26.56.jpeg"/>
             <p class="mt-4">PRODUCT 3</p>
-            <p class="text-gray-500">Rp.0000000</p>
+            <p class="text-gray-500">Rp.300000</p>
             </a>
         </div>
         <div>
             <a href="detailproduct.html?product=4" class="block">
-            <img alt="Product image 4" class="w-full h-64 object-cover cursor-pointer" onclick="showDetails('LOREM IPSUM DOLOR SIT AMET', 'Rp.0000000')" src="asset/WhatsApp Image 2024-12-18 at 00.26.57 (1).jpeg"/>
+            <img alt="Product 4" class="w-full h-64 object-cover cursor-pointer" onclick="showDetails('LOREM IPSUM DOLOR SIT AMET', 'Rp.0000000')" src="asset/WhatsApp Image 2024-12-18 at 00.26.57 (1).jpeg"/>
             <p class="mt-4">PRODUCT 4</p>
             <p class="text-gray-500">Rp.0000000</p>
             </a>
         </div>
         <div>
             <a href="detailproduct.html?product=5" class="block">
-            <img alt="Product image 5" class="w-full h-64 object-cover cursor-pointer" onclick="showDetails('LOREM IPSUM DOLOR SIT AMET', 'Rp.0000000')" src="asset/WhatsApp Image 2024-12-18 at 00.26.57 (2).jpeg"/>
+            <img alt="Product 5" class="w-full h-64 object-cover cursor-pointer" onclick="showDetails('LOREM IPSUM DOLOR SIT AMET', 'Rp.0000000')" src="asset/WhatsApp Image 2024-12-18 at 00.26.57 (2).jpeg"/>
             <p class="mt-4">PRODUCT 5</p>
             <p class="text-gray-500">Rp.0000000</p>
             </a>
@@ -127,7 +127,7 @@
         </div>
     </div>
 
-   <!-- Pagination -->
+   <!-- Ganti Page Section -->
    <div class="mt-8 flex justify-center">
      <ul class="inline-flex items-center -space-x-px">
         <li>
@@ -182,12 +182,12 @@
       SOCIAL MEDIA
      </h3>
      <p>
-      <i class="fab fa-instagram">
+      <i class="fab fa-instagram" href="https://www.instagram.com/atha7apparel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw">
       </i>
       Instagram
      </p>
      <p>
-      <i class="fab fa-tiktok">
+      <i class="fab fa-tiktok" href="https://www.tiktok.com/@atha7apparel?is_from_webapp=1&sender_device=pc">
       </i>
       TikTok
      </p>
