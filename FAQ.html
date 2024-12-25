@@ -1,0 +1,190 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Elegant Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+       .answer {
+            display: none;
+       }
+    </style>
+    <script>
+            function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+               answer.style.display = "block";
+            } else {
+               answer.style.display = "none";
+           }
+        }
+    </script>
+</head>
+<body class="font-sans">
+
+    <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6 my-0">
+        <img alt="Atha 7 Logo" class="container flex flex-col items-center md:items-start w-20 h-auto mb-4 mt-4" height="h-auto" src="asset/logo atha7apparel.png" width="w-auto"/>
+        <nav class="space-x-6">
+        <a class="text-gray-800 hover:text-blue-700 transition ease-in-out delay-150" href="index.html">
+        Home
+        </a>
+        <a class="text-gray-800 hover:text-blue-700 transition ease-in-out delay-150" href="product.html">
+        Product
+        </a>
+        <a class="text-gray-800 hover:text-blue-700 transition ease-in-out delay-150" href="customorder.html">
+        How to Order
+        </a>
+        <a class="text-gray-800 hover:text-blue-700 transition ease-in-out delay-150" href="aboutus.html">
+        About Us
+        </a>
+        </nav>
+    </div>
+  </header>
+
+    <main class="container mx-auto px-6">
+        <section class="text-center my-12">
+            <h2 class="text-5xl font-bold">FAQs</h2>
+            <p class="text-gray-500 mt-4">Frequently Asked Questions.<br>Here are some common questions about Elegant Studio.</p>
+        </section>
+        <section class="bg-gray-100 p-6 rounded-lg shadow-md">
+            <div class="border-t border-b border-gray-300 py-4">
+                <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer1')">
+                    <h3 class="text-lg font-semibold">What is Atha7Apparel?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div id="answer1" class="answer mt-2 text-gray-600">
+                  <p>Your price is determined based on the complexity of the design, the number of colors, and the quantity of the order.</p>
+               </div>
+            </div>
+            <div class="border-t border-b border-gray-300 py-4">
+                <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer2')">
+                    <h3 class="text-lg font-semibold">How do I place a custom jersey order?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div id="answer2" class="answer mt-2 text-gray-600">
+                    <p class="mb-4">You can follow our simple process on the "How to Create Custom Order" page:
+                    <p>  •⁠  ⁠Upload your design or select a template.</p>
+                    <p>  •⁠  ⁠Review and customize the artwork with our team.</p>
+                    <p>  •⁠  ⁠Approve the design and wait for your product to be delivered!</p>
+                        </p>
+                </div>
+            </div>
+            <div class="border-t border-b border-gray-300 py-4">
+                <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer3')">
+                    <h3 class="text-lg font-semibold">What file formats are accepted for custom designs?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div id="answer3" class="answer mt-2 text-gray-600">
+                    <p>We accept popular file formats such as PNG, JPEG, AI, EPS, and PDF. Ensure your design is in high resolution for the best printing results.</p>
+                </div>
+            </div>
+            <div class="border-t border-b border-gray-300 py-4">
+                <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer4')">
+                    <h3 class="text-lg font-semibold">What is the production and delivery time?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div id="answer4" class="answer mt-2 text-gray-600">
+                    <p>Production typically takes 14 business days after design approval. Delivery times vary based on location, but we strive to deliver your order as quickly as possible.</p>
+                </div>
+            </div>
+            <div class="border-t border-b border-gray-300 py-4">
+                <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer5')">
+                    <h3 class="text-lg font-semibold">Is there a minimum order quantity?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div id="answer5" class="answer mt-2 text-gray-600">
+                    <p>Yes, our minimum order quantity depends on the type of jersey. Contact us for details on bulk orders or specific requirements.</p>
+                </div>
+            </div>
+            <div class="border-t border-b border-gray-300 py-4">
+                <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer6')">
+                    <h3 class="text-lg font-semibold">What is your return and refund policy?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div id="answer6" class="answer mt-2 text-gray-600">
+                    <p>Since our products are custom-made, we only accept returns or refunds for defective items. Please check your order carefully before approval.</p>
+                </div>
+            </div>
+            <div class="border-t border-b border-gray-300 py-4">
+                <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer7')">
+                    <h3 class="text-lg font-semibold">How do I contact Atha7Apparel for support?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div id="answer7" class="answer mt-2 text-gray-600">
+                    <p>You can reach us through our Contact Us page, email, or direct messaging on our social media platforms. We’re happy to assist with any questions or concerns.</p>
+                </div>
+            </div>
+            <div class="border-t border-b border-gray-300 py-4">
+                <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer8')">
+                    <h3 class="text-lg font-semibold">Can I track my order?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div id="answer8" class="answer mt-2 text-gray-600">
+                    <p>Yes, once your order is shipped, we will provide a tracking number so you can monitor its progress.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+  <footer class="bg-black text-white p-8 mt-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 ml-20">
+     <div>
+      <img alt="Company Logo" class="mb-4" height="50" src="asset/logo atha7apparrel putih.PNG" width="100"/>
+      <p>
+        From the words you live by to the culture you cherish, we turn your language into wearable art—because every jersey should tell your story.      </p>
+      <p class="mt-4">
+       Atha 7 Apparel
+      </p>
+      <p>
+       CONTACT US:
+      </p>
+      <p>
+       <i class="fab fa-whatsapp">
+       </i>
+       087777513640
+      </p>
+     </div>
+     <div>
+      <h3 class="font-bold mb-2 ml-80">
+       CUSTOMER SERVICE
+      </h3>
+      <ul>
+       <li>
+        <a class="text-gray-400 ml-80" href="FAQ.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-400 ml-80" href="customorder.html">
+            Ordering System
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h3 class="font-bold mb-2 ml-20">
+       SOCIAL MEDIA
+      </h3>
+      <ul class="flex space-x-4 ml-20">
+       <li>
+        <a class="text-gray-400" href="https://www.instagram.com/atha7apparel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+         <i class="fab fa-instagram">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-400" href="https://www.tiktok.com/@atha7apparel?is_from_webapp=1&sender_device=pc">
+         <i class="fab fa-tiktok">
+         </i>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </footer>
+</body>
+</html>
